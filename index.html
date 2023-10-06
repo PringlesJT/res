@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 뷰포트 (viewport) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale="1.0", minimum-scale="1.0">
+
+
+    <!-- swiper.css cdn으로 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <!-- 사용자 정의 css 연결 -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <!-- 파비콘 넣기 -->
+    <link rel="shortcut icon" href="img/Favicon.png" type="image/icon">
+
+
+    <!-- 제이쿼리 라이브러리 연결 -->
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <!-- swiper.js cdn으로 연결 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- gsap 플러그인 연결 -->
+    <script src="js/gsap.min.js"></script>
+
+    <!-- 사용자 정의 js 연결 -->
+    <script src="js/main.js"></script>
+
+    
+    <title>책나래</title>
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <header>
+
+            <div class="center">
+
+                <!-- 로고 -->
+                <div class="logo"><a href="index.html"></a></div>
+
+                <!-- 내비게이션 -->
+                <nav>
+
+                    <ul>
+
+                        <li><a href="#">책나래 소개</a>
+                            <ul class="sub">
+                                <li><a href="#">책나래 서비스 안내</a></li>
+                                <li><a href="#">배너달기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">이용안내</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주묻는 질문</a></li>
+                                <li><a href="#">1:1 문의</a></li>                            
+                            </ul>
+                        </li>
+        
+                        <li><a href="#">자료검색</a>
+                            <ul class="sub">
+                                <li><a href="#">도서관웹검색</a></li>
+                                <li><a href="#">국가자료종합검색</a></li>
+                                <li><a href="#">대학도서관종합검색</a></li>
+                            </ul>
+                        </li>
+        
+                        <li><a href="#">참여도서관 찾기</a></li>
+        
+                        <li><a href="#">나의 책나래</a>
+                            <ul class="sub">
+                                <li><a href="#">책나래 대출현황</a></li>
+                                <li><a href="#">나의 도서관</a></li>
+                            </ul>
+                        </li>
+        
+                        <li><a href="#">책나래 인기도서</a></li>
+        
+                        <li><a href="#">책나래 업무</a></li>
+                    </ul>
+
+                    
+
+                </nav>
+
+                <!-- 다국어 지원, 메뉴 버튼 -->
+                <div class="top_menu">
+
+                    <ul>
+                        <li><a href="#">
+                            <svg height="100%" version="1.1" viewBox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title/><desc/><defs/><g class="lang" fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                                <g fill="#FFFFFF" id="Core" transform="translate(-296.000000, -296.000000)"><g id="language" transform="translate(296.000000, 296.000000)">
+                                <path d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 L10,0 Z M16.9,6 L14,6 C13.7,4.7 13.2,3.6 12.6,2.4 C14.4,3.1 16,4.3 16.9,6 L16.9,6 Z M10,2 C10.8,3.2 11.5,4.5 11.9,6 L8.1,6 C8.5,4.6 9.2,3.2 10,2 L10,2 Z M2.3,12 C2.1,11.4 2,10.7 2,10 C2,9.3 2.1,8.6 2.3,8 L5.7,8 C5.6,8.7 5.6,9.3 5.6,10 C5.6,10.7 5.7,11.3 5.7,12 L2.3,12 L2.3,12 Z M3.1,14 L6,14 C6.3,15.3 6.8,16.4 7.4,17.6 C5.6,16.9 4,15.7 3.1,14 L3.1,14 Z M6,6 L3.1,6 C4.1,4.3 5.6,3.1 7.4,2.4 C6.8,3.6 6.3,4.7 6,6 L6,6 Z M10,18 C9.2,16.8 8.5,15.5 8.1,14 L11.9,14 C11.5,15.4 10.8,16.8 10,18 L10,18 Z M12.3,12 L7.7,12 C7.6,11.3 7.5,10.7 7.5,10 C7.5,9.3 7.6,8.7 7.7,8 L12.4,8 C12.5,8.7 12.6,9.3 12.6,10 C12.6,10.7 12.4,11.3 12.3,12 L12.3,12 Z M12.6,17.6 C13.2,16.5 13.7,15.3 14,14 L16.9,14 C16,15.7 14.4,16.9 12.6,17.6 L12.6,17.6 Z M14.4,12 C14.5,11.3 14.5,10.7 14.5,10 C14.5,9.3 14.4,8.7 14.4,8 L17.8,8 C18,8.6 18.1,9.3 18.1,10 C18.1,10.7 18,11.4 17.8,12 L14.4,12 L14.4,12 Z" id="Shape"/>
+                                </g></g></g>
+                            </svg>
+                        </a></li>
+                        <li><a href="#" class="menu_btn">
+                            <svg style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">                            
+                                <g id="grid_system"/><g id="_icons"><path class="st0" d="M5,7h14c0.6,0,1-0.4,1-1s-0.4-1-1-1H5C4.4,5,4,5.4,4,6S4.4,7,5,7z"/>
+                                <path class="st0" d="M5,13h14c0.6,0,1-0.4,1-1s-0.4-1-1-1H5c-0.6,0-1,0.4-1,1S4.4,13,5,13z"/><path class="st0" d="M5,19h14c0.6,0,1-0.4,1-1s-0.4-1-1-1H5c-0.6,0-1,0.4-1,1S4.4,19,5,19z"/></g>
+                            </svg>
+                        </a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- 서브메뉴 배경 -->
+            <div class="sub_bg"></div>
+
+        </header>
+
+        <section class="sec1">
+            <!-- 메인 슬라이드 - swiper plugin -->
+
+            <!-- Add Swiper HTML Layout : https://swiperjs.com/get-started-->
+            <!-- Slider main container -->
+            <div class="swiper main">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide s1">
+                        <h1>환영합니다!</h1>
+                        <p>책나래 누리집 : cn.nld.go.kr</p>
+                    </div>
+                    <div class="swiper-slide s2">
+                        <h1>도서관 책이 우리집으로 날아왔다</h1>
+                        <p>장애인의 도서관 이용 편의를 위한 무료 우편서비스 책나래</p>
+                    </div>
+                    <div class="swiper-slide s3">
+                        <h1>책나래 서비스란?</h1>
+                        <p>우체국 택배를 이용하여 도서관 자료를 무료로 집까지 배달해드립니다</p>
+                    </div>
+                </div>
+                
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+        <section class="sec2 scrollSet">
+            <div class="search ani firstAni">
+                <select name="list" id="list" onchange="changefn()">                  <!-- combobox 만드는 문은 여기서 select -->
+                    <!-- onselect를 써야하나?... -->
+                    <option value="all">전체</option>
+                    <option value="title">제목</option>
+                    <option value="writer">저자</option>
+                    <option value="publisher">발행처</option>
+                    <option value="isbn">ISBN</option>
+                </select>
+
+                <input type="text" name="bookinfo" class="bookinfo" id="result">
+
+                <button type="button" id="submitBtn">검 색</button>
+
+            </div>
+            <div class="center">
+                <div class="mybook ani secondAni">
+                    <h2>나의 책나래</h2>
+                    <p>나의 도서관을 등록하면<br>원하는 자료를 신청할 수 있습니다.</p>
+                    <button type="button"><a href="#">대출현황 확인</a></button>
+                </div>
+                <div class="info ani thirdAni">
+                    <h2>책나래 이용안내</h2>
+                    <p>책나래 이용 방법을<br>수어와 음성을 사용해 안내드립니다.</p>
+                    
+                    <div class="radio">
+                        <!-- radio : helplang 항목이 같은 선택지 중에서 딱 하나만 고를 수 있음 -->
+                        <input type="radio" name="helplang" id="signlang" checked> 수 어
+                        <input type="radio" name="helplang" id="sound"> 음 성
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sec3 scrollSet">
+
+            <div class="center">
+
+                <!-- div 나눈 기준
+                
+                    1. 컴퓨터에선 가로 나열, 모바일에선 세로 나열되어야 함
+                
+                    2. 내용물이 다름
+                
+                -->
+
+                <div class="content ani firstAni">
+                    <h2>책나래 인기도서 10선</h2>
+                    <p>책나래에서 요즘 자주 대출되는<br>인기도서들을 지금 바로 만나보세요!</p>
+                    <button type="button" class="btnup"><a href="#">자세히 보기</a></button>
+                </div>
+
+                <!-- swiper slide (인기도서 10선) -->
+                <div class="swiper popbook10 ani secondAni">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide s1">
+                            <div class="img img1"></div>
+                            <h3>도시와 그 불확실한 벽</h3>
+                            <p>무라카미 하루키</p>
+                        </div>
+                        <div class="swiper-slide s2">
+                            <div class="img img2"></div>
+                            <h3>아주 희미한 빛으로도</h3>
+                            <p>최은영</p>
+                        </div>
+                        <div class="swiper-slide s3">
+                            <div class="img img3"></div>
+                            <h3>메타버스와 돈의 미래</h3>
+                            <p>오태민</p>
+                        </div>
+                        <div class="swiper-slide s4">
+                            <div class="img img4"></div>
+                            <h3>우리나라 삼국지</h3>
+                            <p>오디언소리</p>
+                        </div>
+                        <div class="swiper-slide s5">
+                            <div class="img img5"></div>
+                            <h3>태백산맥</h3>
+                            <p>조정래</p>
+                        </div>
+                        <div class="swiper-slide s6">
+                            <div class="img img6"></div>
+                            <h3>1％를 읽는 힘 : 세상의 정보를 연결해서 기회를 포착하는 생각 혁신</h3>
+                            <p>메르</p>
+                        </div>
+                        <div class="swiper-slide s7">
+                            <div class="img img7"></div>
+                            <h3>묵향</h3>
+                            <p>전동조</p>
+                        </div>
+                        <div class="swiper-slide s8">
+                            <div class="img img8"></div>
+                            <h3>눈에 갇힌 외딴 산장에서</h3>
+                            <p>히가시노 게이고</p>
+                        </div>
+                        <div class="swiper-slide s9">
+                            <div class="img img9"></div>
+                            <h3>역천무</h3>
+                            <p>백강</p>
+                        </div>
+                        <div class="swiper-slide s10">
+                            <div class="img img10"></div>
+                            <h3>형사 박미옥</h3>
+                            <p>박미옥</p>
+                        </div>
+                    </div>
+
+                    <!-- pagenation progress -->
+                    <div class="swiper-pagination"></div>
+    
+                </div>
+                <!-- prev 버튼, next 버튼 -->
+                <div class="swiper-button-next ani firstAni"></div>
+                <div class="swiper-button-prev ani firstAni"></div>
+
+                <button type="button" class="btndown"><a href="#">자세히 보기</a></button>
+
+            </div>
+           
+        </section>
+
+
+        <section class="sec4 scrollSet">
+
+            <div class="center">
+
+                <div class="content ani firstAni">
+                    <h2>공지사항</h2>
+                    <p>책나래 소식을 읽고<br>최근 근황을 확인하세요!</p>
+                    <button type="button" class="btnup"><a href="#">자세히 보기</a></button>
+                </div>
+
+                <!-- swiper slide (인기도서 10선) -->
+                <div class="swiper notice ani secondAni">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide s1">
+                            <div class="img img1"></div>
+                            <h3>[알림] 책나래 계약소포 배달지연 안내 (8.12.(토) ~ 8.16.(수))</h3>
+                            <span>2023-08-09</span>
+                            <p>
+                                안녕하세요, 책나래 센터입니다.<br><br>
+                                우체국의 '택배 쉬는 날' 및 '소포위탁배달원 하계휴가'로 인해 책나래 계약소포의 배달지연을 알려드립니다.
+                            </p>
+                        </div>
+                        <div class="swiper-slide s2">
+                            <div class="img img2"></div>
+                            <h3>[중요] 장마철 도서 반납시 주의 요청</h3>
+                            <span>2023-08-09</span>
+                            <p>
+                                안녕하세요, 책나래 센터입니다.
+                                <br><br>장마와 집중호우 등으로 반납자료가 빗물에 훼손되는 일이 생기고 있습니다.
+                                <br><br>비가 오는 날은 야외에 책나래 가방을 두어 책이 훼손되지 않도록 요청드립니다.
+                            </p>
+                        </div>
+                        <div class="swiper-slide s3">
+                            <h3>2023년 책나래 서비스 온라인 행사 선정자 발표</h3>
+                            <span>2023-06-15</span>
+                            <p>
+                                2023년 책나래 서비스 온라인 행사(5.1. ~ 5.31.)의 선정자를 발표합니다.
+                                <br><br>경 품: 1만원 상당의 모바일문화상품권(2023. 6. 23. 발송 예정)
+                            </p>
+                        </div>
+                        <div class="swiper-slide s4">
+                            <h3>2023년 책나래 온라인 행사 안내</h3>
+                            <span>2023-04-21</span>
+                            <p>
+                                참가대상: 책나래 누리집 신규회원
+                                <br><br>행사내용: 행사기간 내 책나래 누리집 신규가입 회원 중 선착순 200명에게 경품 제공(1만원 상당 모바일 문화상품권)
+                            </p>
+                        </div>
+                        <div class="swiper-slide s5">
+                            <h3>[긴급] 책나래 홈페이지 로그인 정상화 안내</h3>
+                            <span>2023-03-21</span>
+                            <p>
+                                안녕하세요, 책나래 센터입니다.
+                                <br><br>책나래 홈페이지 로그인이 정상적으로 되고 있습니다.
+                                <br><br>책나래 서비스 이용에 불편을 드려 죄송합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- pagenation progress -->
+                    <div class="swiper-pagination"></div>
+    
+                </div>
+                <!-- prev 버튼, next 버튼 -->
+                <div class="swiper-button-next ani firstAni"></div>
+                <div class="swiper-button-prev ani firstAni"></div>
+
+
+                <button type="button" class="btndown"><a href="#">자세히 보기</a></button>
+
+            </div>
+
+        </section>
+
+        <section class="sec5 scrollSet">
+
+            <div class="center">
+
+                <div class="content ani firstAni">
+                    <h2>2023년 사용자 조사 통계</h2>
+                    <p>2023년도 국립중앙박물관 고객만족도 조사 결과보고서입니다.</p>
+
+                    <div class="graph">
+                        <img src="img/WORK2_check_circle_icon.png" alt="graph">
+                    </div>
+                </div>
+
+                <div class="statis ani secondAni" id="count-area">
+                    <ul>
+                        <li>
+                            <img src="img/WORK8_library_icon.png" alt="statistics">
+                            <p>앱 서비스 만족도 조사</p>
+                            <div class="count">
+                                <span class="num" id="count-item1">1220</span>  <!-- data-speed =1000 이 1초 -->
+                                <b>명</b>   <!-- 단위 -->
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/wifi.png" alt="statistics">
+                            <p>앱 서비스 사용자 통계 조사</p>
+                            <div class="count">
+                                <span class="num" id="count-item2">723</span>
+                                <b>명</b>   <!-- 단위 -->
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/wifi.png" alt="statistics">
+                            <p>홈페이지 만족도 조사</p>
+                            <div class="count">
+                                <span class="num" id="count-item3">6470</span>
+                                <b>점</b>   <!-- 단위 -->
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/wifi.png" alt="statistics">
+                            <p>홈페이지 방문자 통계</p>
+                            <div class="count">
+                                <span class="num" id="count-item4">3791</span>
+                                <b>명</b>   <!-- 단위 -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <section class="sec6 scrollSet">
+
+            <div class="center">
+
+                <div class="content ani firstAni">
+
+                    <h2>온라인 전시관</h2>
+
+                    <p>
+                        책나래 서비스는 도서관 방문 이용이 어려운 장애인 등을 위하여
+                        이용자가 필요로 하는 도서관 자료를
+                        우체국 택배를 이용하여 
+                        무료로 집까지 제공해 드리는 서비스입니다.
+                    </p>
+
+                    <button class="btnup"><a href="#">더 보기</a></button>
+
+                </div>  <!-- content -->
+
+                <div class="work">
+                    <ul>
+                        <li class="work1 ani ani1"><a href="#">제공 도서관 가입</a></li>
+                        <li class="work2 ani ani2"><a href="#">책나래 이용자 승인</a></li>
+                        <li class="work3 ani ani3"><a href="#">책나래 신청 처리</a></li>
+                        <li class="work4 ani ani4"><a href="#">사서 대리 신청/반납</a></li>
+                        <li class="work5 ani ani5"><a href="#">책바다 연계 서비스</a></li>
+                        <li class="work6 ani ani6"><a href="#">책나래 택배가방 신청</a></li>
+                        <li class="work7 ani ani7"><a href="#">FAQ</a></li>
+                        <li class="work8 ani ani8"><a href="#">참여 도서관 찾기</a></li>
+                        <li class="work9 ani ani9"><a href="#">국립중앙도서관<br>사서 추천 도서</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="mobilebtn">
+                    <button class="btndown"><a href="#">더 보기</a></button>
+                </div>
+                
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <div class="center">
+
+                <div class="footer1">
+                    <div class="f_logo">
+                        <img src="img/logo_bw.png" alt="logo">
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li><a href="#">이용 약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">회사 소개</a></li>
+                            <!-- 
+                                <li><a href="#">전자 민원</a></li>
+                                <li><a href="#">공공데이터 개방</a></li>
+                                <li><a href="#">저작권 정책</a></li>
+                                <li><a href="#">클린신고센터</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                             -->
+                        </ul>
+                    </div>
+                    <address>
+                        우편번호 06579  <br>
+                        서울시 서초구 반포대로 201 (반포동)  <br>
+                        문의전화 1644-6044  <br>
+                        팩스 02-590-0656  <br>
+                    </address>
+                    <p>Copyright&copy;2014 국립장애인도서관  <br>All rights reserved.</p>     <!-- 카피라이트 : 주로 p태그나 div를 사용함 | &copy == ⓒ -->
+                </div>  <!-- END - footer1 -->
+
+                <div class="footer2">
+                    <div class="family_site">
+                        <a href="#">Family Site</a>     <!-- 제목 -->
+
+                        <div class="family_list">
+                            <ul>
+                                <li><a href="#">국립중앙도서관</a></li>
+                                <li><a href="#">국립장애인도서관</a></li>
+                                <li><a href="#">책바다 국가상호대차서비스</a></li>
+                                <li><a href="#">대한민국정부포털</a></li>
+                                <li><a href="#">DREAM 국가대체자료공유시스템</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#"><img src="img/globe.png" alt="sns1-facebook"></a></li>
+                            <li><a href="#"><img src="img/globe.png" alt="sns2-twitter"></a></li>
+                            <li><a href="#"><img src="img/globe.png" alt="sns3-instagram"></a></li>
+                            <li><a href="#"><img src="img/globe.png" alt="sns4-youtube"></a></li>
+                        </ul>
+                    </div>
+
+                </div>  <!-- END - footer2 -->
+
+            </div>
+        </footer>
+
+        <!-- top button -->
+        <div class="top"><a href="#"><img src="img/211624_c_up_arrow_icon.png" alt="up arrow"></a></div>
+
+    </div>    
+
+
+    <script>    // sec5 연역의 count animation
+        // https://codepen.io/syedrafeeq/pen/OJyLXw
+
+        // (function ($) {                                                     // 플러그인을 만드는 공식
+        //     $.fn.countTo = function (options) {
+        //         options = options || {};
+                
+        //         return $(this).each(function () {
+        //             // set options for current element
+        //             var settings = $.extend({}, $.fn.countTo.defaults, {
+        //                 from:            $(this).data('from'),
+        //                 to:              $(this).data('to'),
+        //                 speed:           $(this).data('speed'),
+        //                 refreshInterval: $(this).data('refresh-interval'),
+        //                 decimals:        $(this).data('decimals')
+        //             }, options);
+                    
+        //             // how many times to update the value, and how much to increment the value on each update
+        //             var loops = Math.ceil(settings.speed / settings.refreshInterval),
+        //                 increment = (settings.to - settings.from) / loops;
+                    
+        //             // references & variables that will change with each update
+        //             var self = this,
+        //                 $self = $(this),
+        //                 loopCount = 0,
+        //                 value = settings.from,
+        //                 data = $self.data('countTo') || {};
+                    
+        //             $self.data('countTo', data);
+                    
+        //             // if an existing interval can be found, clear it first
+        //             if (data.interval) {
+        //                 clearInterval(data.interval);
+        //             }
+        //             data.interval = setInterval(updateTimer, settings.refreshInterval);
+                    
+        //             // initialize the element with the starting value
+        //             render(value);
+                    
+        //             function updateTimer() {
+        //                 value += increment;
+        //                 loopCount++;
+                        
+        //                 render(value);
+                        
+        //                 if (typeof(settings.onUpdate) == 'function') {
+        //                     settings.onUpdate.call(self, value);
+        //                 }
+                        
+        //                 if (loopCount >= loops) {
+        //                     // remove the interval
+        //                     $self.removeData('countTo');
+        //                     clearInterval(data.interval);
+        //                     value = settings.to;
+                            
+        //                     if (typeof(settings.onComplete) == 'function') {
+        //                         settings.onComplete.call(self, value);
+        //                     }
+        //                 }
+        //             }
+                    
+        //             function render(value) {
+        //                 var formattedValue = settings.formatter.call(self, value, settings);
+        //                 $self.html(formattedValue);
+        //             }
+        //         });
+        //     };
+            
+        //     $.fn.countTo.defaults = {
+        //         from: 0,               // the number the element should start at
+        //         to: 0,                 // the number the element should end at
+        //         speed: 700,           // how long it should take to count between the target numbers
+        //         refreshInterval: 3,    // how often the element should be updated
+        //         decimals: 0,           // the number of decimal places to show
+        //         formatter: formatter,  // handler for formatting the value before rendering
+        //         onUpdate: null,        // callback method for every time the element is updated
+        //         onComplete: null       // callback method for when the element finishes updating
+        //     };
+            
+        //     function formatter(value, settings) {
+        //         return value.toFixed(settings.decimals);
+        //     }
+        // }(jQuery));
+
+        // jQuery(function ($) {
+        // // custom formatting example
+        // $('.count-number').data('countToOptions', {
+        //     formatter: function (value, options) {
+        //     return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+        //     }
+        // });
+        
+        // // start all the timers
+        // //$('.timer').each(count);  
+        // // 스크롤 내릴 때마다 section안의 자식 콘텐츠들이 서서히 나타나는 애니메이션 ($('.timer').each(count); 대체)
+        // $(window).scroll(function(){
+        //         //윈도우의 scrollTop값을 winTop변수에 저장
+        //         let wTop=$(this).scrollTop();
+        //         //$(this) : .scrollSet(인덱스 0~4)
+        //         //offset().top : section의 top값
+        //         let sTop=$('.sec5').offset().top-100;
+        //         //section의 bottom값
+        //         let sBottom=sTop+$(this).height();
+        //         //만약 secTop이 winTop보다 작고, secBottom이 winTop보다 크면 section의 자식객체에 active 추가
+        //         if(sTop < wTop && sBottom > wTop){
+        //             // start all the timers
+        //             $('.timer').each(count); 
+        //         }               
+        //     });
+
+        // function count(options) {
+        //     var $this = $(this);
+        //     options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        //     $this.countTo(options);
+        // }
+        // });
+
+
+            // 카운팅 애니메이션 함수
+        function count(element, start, end, duration) {
+            let current = start;
+            const range = end - start;
+            const increment = range / (duration / 10);
+            const stepTime = 50; // 10ms 마다 증가하도록 설정
+
+            let timer = setInterval(function() {
+                current += increment;
+                if (current >= end) {
+                    clearInterval(timer);
+                    current = end;
+                }
+                element.textContent = formatNumber(current, end);
+            }, stepTime);
+        }
+
+        function formatNumber(number, end) {
+            if (Number.isInteger(end)) {
+                return number.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+            } else {
+                return number.toFixed(1);
+            }
+        }
+
+        // 스크롤 이벤트 리스너
+        window.addEventListener('scroll', function() {
+            const countArea = document.getElementById('count-area');
+            const countAreaPosition = countArea.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight;
+
+            if (countAreaPosition < screenPosition / 2) { // 요소가 반이상 보였을 때 실행
+
+                const count1 = document.getElementById('count-item1');
+                count(count1, 0, 1220, 300);
+
+                const count2 = document.getElementById('count-item2');
+                count(count2, 0, 723, 300);
+
+                const count3 = document.getElementById('count-item3');
+                count(count3, 0, 6470, 300);
+
+                const count4 = document.getElementById('count-item3');
+                count(count4, 0, 3791, 300);
+
+                // 이벤트 리스너 삭제
+                window.removeEventListener('scroll', arguments.callee);
+            }
+        });
+
+        // resize()
+        // $(window).resize(function() {
+        //     $.AdjustZoom = function(options) {
+        //         var option = { zoomRation : 100 };
+        //         $.extend(option, options);
+
+        //         // 브라우저 배율이 100%가 아닌 경우 처리
+        //         if (screen.logicalXDPI != screen.deviceXDPI) {
+        //             try {
+        //                 // alert (screen.availWidth+", "+)
+        //             }
+        //         }
+
+        //     }
+        // });
+        
+    </script>
+
+</body>
+
+</html>
